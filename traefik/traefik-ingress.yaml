@@ -1,0 +1,18 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: traefik-nginx-ingress
+spec:
+  entryPoints:
+    - websecure
+    - web
+  routes:
+    - match: Host(`oys2.izu.edu.tr`) 
+      kind: Rule
+      services:
+        - name: webwork
+          port: 80
+      middlewares:
+        - name: https-redirect
+  tls:
+    certResolver: letsencrypt

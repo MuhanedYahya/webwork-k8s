@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-configmap
+data:
+  MARIADB_DATABASE: "webwork"
+  MARIADB_USER: "webworkWrite"
+  MARIADB_PASSWORD: "userPass###"
+  MARIADB_ROOT_PASSWORD: "webworkRootPass###"
+

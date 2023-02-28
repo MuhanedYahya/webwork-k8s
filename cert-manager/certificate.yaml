@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: webwork-certification
+spec:
+  secretName: webwork-cert-secret
+  dnsNames:
+    - "oys2.izu.edu.tr"
+    - "*.oys2.izu.edu.tr"
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: webwork-configmap
+data:
+  WEBWORK_DB_NAME: "webwork"
+  WEBWORK_DB_PASSWORD: "userPass###"
+  WEBWORK_DB_USER: "webworkWrite"
+  WEBWORK_DB_HOST: "db"
+  WEBWORK_DB_PORT: "3306"
+  WEBWORK_ROOT_URL: "webwork"
